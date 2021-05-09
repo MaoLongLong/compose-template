@@ -1,0 +1,27 @@
+version: '3'
+services:
+  master:
+    container_name: master
+    image: redis
+    ports:
+      - '6379:6379'
+  slave0:
+    container_name: slave0
+    image: redis
+    depends_on:
+      - master
+    command:
+      - 'redis-server'
+      - '--slaveof master 6379'
+    ports:
+      - '6380:6379'
+  slave1:
+    container_name: slave1
+    image: redis
+    depends_on:
+      - master
+    command:
+      - 'redis-server'
+      - '--slaveof master 6379'
+    ports:
+      - '6381:6379'
