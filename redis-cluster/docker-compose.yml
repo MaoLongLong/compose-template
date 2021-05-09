@@ -1,0 +1,69 @@
+version: '3'
+
+services:
+
+  redis_7000:
+    image: redis
+    container_name: redis_7000
+    network_mode: 'host'
+    volumes:
+      - ./7000/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7000/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+
+  redis_7001:
+    image: redis
+    container_name: redis_7001
+    network_mode: 'host'
+    volumes:
+      - ./7001/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7001/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+
+  redis_7002:
+    image: redis
+    container_name: redis_7002
+    network_mode: 'host'
+    volumes:
+      - ./7002/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7002/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+
+  redis_7003:
+    image: redis
+    container_name: redis_7003
+    network_mode: 'host'
+    volumes:
+      - ./7003/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7003/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+
+  redis_7004:
+    image: redis
+    container_name: redis_7004
+    network_mode: 'host'
+    volumes:
+      - ./7004/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7004/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+
+  redis_7005:
+    image: redis
+    container_name: redis_7005
+    network_mode: 'host'
+    volumes:
+      - ./7005/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./7005/data:/data
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
