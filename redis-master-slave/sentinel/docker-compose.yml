@@ -33,4 +33,4 @@ services:
 networks:
   default:
     external:
-      name: redis_default
+      name: redis-master-slave_default
