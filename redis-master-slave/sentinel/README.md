@@ -5,7 +5,7 @@ $ docker inspect master
 
 ......
 
-"IPAddress": "172.19.0.2",
+"IPAddress": "172.18.0.2",
 
 ......
 ```
