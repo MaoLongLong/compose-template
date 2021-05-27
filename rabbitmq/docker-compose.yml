@@ -1,0 +1,29 @@
+version: '3'
+services:
+  rabbit1:
+    container_name: rabbit1
+    image: rabbitmq:3-management
+    hostname: rabbit1
+    volumes:
+      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  rabbit2:
+    container_name: rabbit2
+    image: rabbitmq:3-management
+    hostname: rabbit2
+    volumes:
+      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+  rabbit3:
+    container_name: rabbit3
+    image: rabbitmq:3-management
+    hostname: rabbit3
+    volumes:
+      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie
+    ports:
+      - "5674:5672"
+      - "15674:15672"
